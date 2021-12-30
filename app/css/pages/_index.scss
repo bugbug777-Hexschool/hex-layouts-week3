@@ -137,72 +137,73 @@
     @include pc {
         padding: 60px 0 80px 0;
     }
-}
 
-.intro__title {
-    text-align: center;
-    font-size: 2.4rem;
-    color: $secondary;
-    margin-bottom: 20px;
+    .intro__title {
+        text-align: center;
+        font-size: 2.4rem;
+        color: $secondary;
+        margin-bottom: 20px;
 
-    @include pad {
-        font-size: 3.2rem;
+        @include pad {
+            font-size: 3.2rem;
+            margin-bottom: 32px;
+        }
+
+        @include pc {
+            font-size: 4.8rem;
+            margin-bottom: 40px;
+        }
+    }
+
+    .cards {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+
+        @include pad {
+            justify-content: space-around;
+        }
+
+        @include pc {
+            justify-content: space-between;
+        }
+    }
+
+    .card {
+        width: 255px;
+        display: flex;
+        flex-direction: column;
         margin-bottom: 32px;
-    }
 
-    @include pc {
-        font-size: 4.8rem;
-        margin-bottom: 40px;
-    }
-}
+        &:last-child {
+            margin-bottom: 0;
+        }
 
-.cards {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
+        @include pad {
+            &:nth-last-child(2) {
+                margin-bottom: 0;
+            }
+        }
 
-    @include pad {
-        justify-content: space-around;
-    }
-
-    @include pc {
-        justify-content: space-between;
-    }
-}
-
-.card {
-    width: 255px;
-    display: flex;
-    flex-direction: column;
-    margin-bottom: 32px;
-
-    &:last-child {
-        margin-bottom: 0;
-    }
-
-    @include pad {
-        &:nth-last-child(2) {
+        @include pad {
             margin-bottom: 0;
         }
     }
 
-    @include pad {
-        margin-bottom: 0;
+    .card-img {
+        width: 100px;
+        height: 100px;
+        margin: 0 auto 16px auto;
+    }
+
+    .card-title {
+        text-align: center;
+        font-size: 2.4rem;
+        color: $secondary;
+        margin-bottom: 8px;
     }
 }
 
-.card-img {
-    width: 100px;
-    height: 100px;
-    margin: 0 auto 16px auto;
-}
-
-.card-title {
-    text-align: center;
-    font-size: 2.4rem;
-    color: $secondary;
-    margin-bottom: 8px;
-}
 
 // Products
 .classic {
@@ -242,13 +243,17 @@
     display: flex;
     flex-wrap: wrap; // debugger
     margin-bottom: 8px;
+
     &:last-child {
         margin-bottom: 0;
     }
+
     @include pc {
         margin-bottom: 32px;
+
         &:nth-child(2) {
             flex-direction: row-reverse;
+
             .list__title {
                 margin-right: 30px;
             }
@@ -271,6 +276,7 @@
         height: 320px;
     }
 }
+
 .list__title {
     position: absolute;
     top: 50%;
@@ -280,6 +286,7 @@
     align-items: center;
     font-size: 2.8rem;
     color: $primary;
+
     @include pad {
         position: relative;
         top: 0;
@@ -287,18 +294,116 @@
         transform: none;
         margin-left: 30px;
     }
+
     @include pc {
         font-size: 4.8rem;
     }
 }
+
 .list__icon {
     width: 40px;
     height: 40px;
     margin-right: 8px;
+
     @include pc {
         width: 48px;
         height: 48px;
         margin-right: 10px;
+    }
+}
+
+// Brand
+.brand {
+    background-image: url("../img/bg.png");
+    background-position: center;
+    background-size: cover;
+    padding-top: 32px;
+    padding-bottom: 40px;
+
+    @include pad {
+        padding-top: 40px;
+        padding-bottom: 56px;
+    }
+
+    @include pc {
+        padding-top: 60px;
+        padding-bottom: 80px;
+    }
+
+    .brand__title {
+        text-align: center;
+        font-size: 2rem;
+        color: $white;
+        margin-bottom: 20px;
+
+        @include pad {
+            font-size: 3.2rem;
+            margin-bottom: 32px;
+        }
+
+        @include pc {
+            font-size: 4.8rem;
+            margin-bottom: 40px;
+        }
+    }
+
+    .cards {
+        display: flex;
+        flex-wrap: wrap;
+
+        @include pad {
+            justify-content: space-between;
+        }
+    }
+
+    .card {
+        position: relative;
+
+        &:first-child {
+            margin-bottom: 16px;
+        }
+
+        @include pad {
+            width: 45.8%;
+
+            &:first-child {
+                margin-bottom: 0;
+            }
+        }
+
+        @include pc {
+            width: 47.3%;
+        }
+    }
+
+    .card-img {
+        object-position: center;
+        object-fit: cover;
+    }
+
+    .card-title {
+        // Code Start
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        // Code End
+
+        font-size: 3.2rem;
+        color: $secondary;
+
+        @include pc {
+            font-size: 7.2rem;
+            white-space: nowrap;
+        }
+
+        &:hover {
+            background-color: rgba(255, 255, 255, 0.5);
+        }
     }
 }
 
