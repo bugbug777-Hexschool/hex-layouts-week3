@@ -1,0 +1,19 @@
+*, *::after, *::before {
+    box-sizing: border-box;
+}
+html {
+    font-size: 62.5%; // Set root font size to 10px.
+}
+body {
+    font-size: 1.6rem;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Microsoft JhengHei", Roboto, "Helvetica Neue", Arial, sans-serif;;
+    line-height: 1.5;
+}
+a {
+    text-decoration: none;
+}
+img {
+    max-width: 100%;
+    height: auto;
+    display: block; // 較容易發現問題
+}

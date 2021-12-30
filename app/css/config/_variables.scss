@@ -1,0 +1,24 @@
+// Colors
+$black: black;
+$white: white;
+$primary: #AA0601;
+$secondary: #FAFAFA;
+$info: #c2a014;
+$success: #91780f;
+$danger: #cd6262;
+$light: darken($white, 10%);
+$dark: lighten($black, 10%);
+$gray: #c4c4c4;
+
+$themes: (
+    "primary": $primary,
+    "secondary": $secondary,
+    "info": $info,
+    "success": $success,
+    "danger": $danger,
+    "light": $light,
+    "dark": $dark,
+    "black": $black,
+    "white": $white,
+    "gray": $gray,
+);
