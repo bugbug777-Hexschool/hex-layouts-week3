@@ -114,3 +114,142 @@
         }
     }
 }
+
+// Footer
+.footer {
+    background-color: $primary;
+    padding: 24px 0;
+    @include pad {
+        padding: 32px 0;
+    }
+    @include pc {
+        padding-bottom: 39px;
+    }
+}
+.footer__navbar {
+    display: none;
+    @include pad {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin-bottom: 18px;
+        .nav-link {
+            height: 24px;
+            line-height: 24px;
+            font-size: 1.6rem;
+            padding: 0 20px;
+        }
+    }
+    @include pc {
+        margin-bottom: 24px;
+        .nav-link {
+            padding: 0 24px;
+        }
+    }
+
+}
+
+.contact {
+    padding-bottom: 24px;
+    @include pad {
+        padding-bottom: 20px;
+    }
+    @include pc {
+        padding-bottom: 24px;
+    }
+}
+.contact__item {
+    display: flex;
+    align-items: center;
+    margin-bottom: 6px;
+    &:last-child {
+        margin-bottom: 0;
+    }
+}
+.contact__icon {
+    width: 20px;
+    height: 20px;
+    margin-right: 4px;
+    @include pad {
+        width: 24px;
+        height: 24px;
+        margin-right: 8px;
+    }
+    @include pc {
+        width: 48px;
+        height: 48px;
+        margin-right: 16px;
+    }
+}
+.contact__link {
+    color: $white;
+    &:hover {
+        opacity: 0.7;
+    }
+    @include pad {
+        font-size: 2rem;
+    }
+    @include pc {
+        font-size: 3.6rem;
+    }
+}
+
+
+.social {
+    display: flex;
+}
+.social__item {
+    margin-right: 24px;
+    &:last-child {
+        margin-right: 0;
+    }
+    @include pc {
+        margin-right: 32px;
+    }
+}
+.social__icon {
+    width: 24px;
+    height: 24px;
+    &:hover {
+        opacity: 0.7;
+    }
+    @include pc {
+        width: 48px;
+        height: 48px;
+    }
+}
+
+.statement {
+    display: flex;
+    flex-direction: column;
+    @include pad {
+        flex-direction: row;
+    }
+}
+.statement__item {
+    font-size: 1.4rem;
+    color: $white;
+    margin-bottom: 8px;
+    &:last-child {
+        margin-bottom: 0;
+    }
+    @include pad {
+        margin-bottom: 0;
+        font-size: 1.6rem;
+        &:first-child {
+            margin-right: auto;
+        }
+    }
+}
+.statement__link {
+    color: $white;
+    &:hover {
+        opacity: 0.7;
+    }
+    @include pad {
+        font-size: 1.4rem;
+        padding: 8px 12px;
+    }
+}
+
+// 超連結的 paddings 尚未處理

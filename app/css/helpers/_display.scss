@@ -1,17 +1,34 @@
+.d-none {
+    display: none !important;
+
+    &-md {
+        @include pad {
+            display: none !important;
+        }
+    }
+}
+
 .d-flex {
-    display: flex;
+    display: flex !important;
 }
+
 .flex-row-reverse {
-    flex-direction: row-reverse;
+    flex-direction: row-reverse !important;
 }
+
+.justify-content-between {
+    justify-content: space-between !important;
+}
+
 .align-items-center {
-    align-items: center;
+    align-items: center !important;
 }
 
 // Size Control
 .h-100 {
-    height: 100%;
+    height: 100% !important;
 }
+
 .w-100 {
-    width: 100%;
+    width: 100% !important;
 }

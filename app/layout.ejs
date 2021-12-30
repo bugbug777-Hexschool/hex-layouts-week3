@@ -2,40 +2,85 @@
 <html lang="zh-Hant-TW">
 
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title><%- title %></title>
-    <link rel="stylesheet" href="css/all.css">
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title><%- title %></title>
+  <link rel="stylesheet" href="css/all.css">
 </head>
 
 <body>
-    <header class="header">
-        <!-- 導覽列 -->
-        <nav class="navbar">
-            <a href="#" class="nav-logo">
-                <h1>LOGO</h1>
-            </a>
-            <ul class="nav">
-                <li class="nav-item"><a href="#" class="nav-link">系列鏡框</a></li>
-                <li class="nav-item"><a href="#" class="nav-link">門市據點</a></li>
-                <li class="nav-item"><a href="#" class="nav-link">部落格</a></li>
-                <li class="nav-item"><a href="#" class="nav-link">常見問題</a></li>
-            </ul>
-        </nav>
-        <!-- 橫幅 -->
-        <div class="banner">
-            <div class="container | d-flex flex-row-reverse align-items-center | h-100">
-                <h2 class="banner__content"><span>Promise-Desert 2020 早春系列</span><br>看得清，才能看得遠</h2>
-            </div>
-        </div>
-    </header>
-    <%- contents %>
-    <footer>
-        <p>這是 Footer</p>
-    </footer>
-    
-    <script src="js/bundle.js"></script>
+  <header class="header">
+    <!-- 導覽列 -->
+    <nav class="navbar">
+      <a href="#" class="nav-logo">
+        <h1>LOGO</h1>
+      </a>
+      <ul class="nav">
+        <li class="nav-item"><a href="#" class="nav-link">系列鏡框</a></li>
+        <li class="nav-item"><a href="#" class="nav-link">門市據點</a></li>
+        <li class="nav-item"><a href="#" class="nav-link">部落格</a></li>
+        <li class="nav-item"><a href="#" class="nav-link | pe-0">常見問題</a></li>
+      </ul>
+    </nav>
+    <!-- 橫幅 -->
+    <div class="banner">
+      <div class="container | d-flex flex-row-reverse align-items-center | h-100">
+        <h2 class="banner__content"><span>Promise-Desert 2020 早春系列</span><br>看得清，才能看得遠</h2>
+      </div>
+    </div>
+  </header>
+  <%- contents %>
+  <footer class="footer">
+    <div class="container">
+      <!-- 頁尾導覽列 -->
+      <nav class="footer__navbar">
+        <ul class="nav">
+          <li class="nav-item"><a href="#" class="nav-link | ps-0">首頁</a></li>
+          <li class="nav-item"><a href="#" class="nav-link">系列鏡框</a></li>
+          <li class="nav-item"><a href="#" class="nav-link">門市據點</a></li>
+          <li class="nav-item"><a href="#" class="nav-link">部落格</a></li>
+          <li class="nav-item"><a href="#" class="nav-link">常見問題</a></li>
+        </ul>
+        <ul class="social">
+          <li class="social__item"><a href="#" class="social__link"><img class="social__icon" src="img/icon-fb.svg"
+                alt="facebook"></a>
+          </li>
+          <li class="social__item"><a href="#" class="social__link"><img class="social__icon" src="img/icon-ig.svg"
+                alt="instagram"></a></li>
+          <li class="social__item"><a href="#" class="social__link"><img class="social__icon" src="img/icon-line.svg"
+                alt="line"></a></li>
+        </ul>
+      </nav>
+      <!-- 聯絡資訊 -->
+      <div class="d-flex justify-content-between | border-bottom border-white | mb-4 mb-6-md mb-8-lg">
+        <ul class="contact">
+          <li class="contact__item"><img src="img/icon-phone.svg" alt="telphone icon" class="contact__icon"><a
+              class="contact__link" href="tel:+886-800-000-000">0800-000-000</a>
+          </li>
+          <li class="contact__item"><img src="img/icon-mail.svg" alt="mail icon" class="contact__icon"><a
+              class="contact__link" href="mailto:glasses@business.com">glasses@business.com</a></li>
+        </ul>
+        <ul class="social d-none-md">
+          <li class="social__item"><a href="#" class="social__link"><img class="social__icon" src="img/icon-fb.svg"
+                alt="facebook"></a>
+          </li>
+          <li class="social__item"><a href="#" class="social__link"><img class="social__icon" src="img/icon-ig.svg"
+                alt="instagram"></a></li>
+          <li class="social__item"><a href="#" class="social__link"><img class="social__icon" src="img/icon-line.svg"
+                alt="line"></a></li>
+        </ul>
+      </div>
+      <!-- 宣告 -->
+      <ul class="statement">
+        <li class="statement__item">Copyright &copy; 2020 Glasses.All rights reserved.</li>
+        <li class="statement__item"><a href="#" class="statement__link">隱私權政策</a></li>
+        <li class="statement__item"><a href="#" class="statement__link pe-0">服務條款</a></li>
+      </ul>
+    </div>
+  </footer>
+
+  <script src="js/bundle.js"></script>
 </body>
 
 </html>

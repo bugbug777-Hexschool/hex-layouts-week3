@@ -1,0 +1,19 @@
+.ps-0 {
+    padding-left: 0 !important;
+}
+.pe-0 {
+    padding-right: 0 !important;
+}
+.mb-4 {
+    margin-bottom: 16px !important;
+}
+.mb-6-md {
+    @include pad {
+        margin-bottom: 24px !important;
+    }
+}
+.mb-8-lg {
+    @include pc {
+        margin-bottom: 32px !important;
+    }
+}
