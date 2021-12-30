@@ -34,10 +34,12 @@
         background-position: center;
         background-size: cover;
         margin: 0 auto;
+
         @include pad {
             width: 80px;
             height: 50px;
         }
+
         // Hide Text
         text-indent: 101%;
         white-space: nowrap;
@@ -69,6 +71,7 @@
     text-align: center;
     color: #fff;
     padding: 8px 0;
+
     &:hover {
         opacity: 0.7;
     }
@@ -90,25 +93,32 @@
     background-position: center;
     background-size: cover;
     height: 394px;
+
     @include pad {
         height: 840px;
     }
 }
+
 .banner__content {
     text-align: right;
     font-size: 3.2rem;
     color: $secondary;
+
     @include pad {
         font-size: 4.8rem;
     }
+
     @include pad {
         font-size: 6.4rem;
     }
+
     span {
         font-size: 1.6rem;
+
         @include pad {
             font-size: 2rem;
         }
+
         @include pc {
             font-size: 3.6rem;
         }
@@ -119,60 +129,74 @@
 .intro {
     background-color: $info;
     padding: 32px 0 40px 0;
+
     @include pad {
         padding: 40px 0 56px 0;
     }
+
     @include pc {
         padding: 60px 0 80px 0;
     }
 }
+
 .intro__title {
     text-align: center;
     font-size: 2.4rem;
     color: $secondary;
     margin-bottom: 20px;
+
     @include pad {
         font-size: 3.2rem;
         margin-bottom: 32px;
     }
+
     @include pc {
         font-size: 4.8rem;
         margin-bottom: 40px;
     }
 }
+
 .cards {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
+
     @include pad {
         justify-content: space-around;
     }
+
     @include pc {
         justify-content: space-between;
     }
 }
+
 .card {
     width: 255px;
     display: flex;
     flex-direction: column;
     margin-bottom: 32px;
+
     &:last-child {
         margin-bottom: 0;
     }
+
     @include pad {
         &:nth-last-child(2) {
             margin-bottom: 0;
         }
     }
+
     @include pad {
         margin-bottom: 0;
     }
 }
+
 .card-img {
     width: 100px;
     height: 100px;
     margin: 0 auto 16px auto;
 }
+
 .card-title {
     text-align: center;
     font-size: 2.4rem;
@@ -180,24 +204,127 @@
     margin-bottom: 8px;
 }
 
+// Products
+.classic {
+    padding-top: 32px;
+    padding-bottom: 40px;
+
+    @include pad {
+        padding-top: 40px;
+        padding-bottom: 56px;
+    }
+
+    @include pc {
+        padding-top: 60px;
+        padding-bottom: 80px;
+    }
+}
+
+.classic__title {
+    text-align: center;
+    font-size: 2rem;
+    color: $secondary;
+    margin-bottom: 20px;
+
+    @include pad {
+        font-size: 3.2rem;
+        margin-bottom: 32px;
+    }
+
+    @include pc {
+        font-size: 4.8em;
+        margin-bottom: 40px;
+    }
+}
+
+.list__item {
+    position: relative;
+    display: flex;
+    flex-wrap: wrap; // debugger
+    margin-bottom: 8px;
+    &:last-child {
+        margin-bottom: 0;
+    }
+    @include pc {
+        margin-bottom: 32px;
+        &:nth-child(2) {
+            flex-direction: row-reverse;
+            .list__title {
+                margin-right: 30px;
+            }
+        }
+    }
+}
+
+.list__img {
+    width: 100%;
+    height: 134px;
+    object-position: center;
+    object-fit: cover;
+
+    @include pad {
+        width: 58%;
+        height: 168px;
+    }
+
+    @include pc {
+        height: 320px;
+    }
+}
+.list__title {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    display: flex;
+    align-items: center;
+    font-size: 2.8rem;
+    color: $primary;
+    @include pad {
+        position: relative;
+        top: 0;
+        left: 0;
+        transform: none;
+        margin-left: 30px;
+    }
+    @include pc {
+        font-size: 4.8rem;
+    }
+}
+.list__icon {
+    width: 40px;
+    height: 40px;
+    margin-right: 8px;
+    @include pc {
+        width: 48px;
+        height: 48px;
+        margin-right: 10px;
+    }
+}
+
 // Footer
 .footer {
     background-color: $primary;
     padding: 24px 0;
+
     @include pad {
         padding: 32px 0;
     }
+
     @include pc {
         padding-bottom: 39px;
     }
 }
+
 .footer__navbar {
     display: none;
+
     @include pad {
         display: flex;
         justify-content: space-between;
         align-items: center;
         margin-bottom: 18px;
+
         .nav-link {
             height: 24px;
             line-height: 24px;
@@ -205,8 +332,10 @@
             padding: 0 20px;
         }
     }
+
     @include pc {
         margin-bottom: 24px;
+
         .nav-link {
             padding: 0 24px;
         }
@@ -216,44 +345,55 @@
 
 .contact {
     padding-bottom: 24px;
+
     @include pad {
         padding-bottom: 20px;
     }
+
     @include pc {
         padding-bottom: 24px;
     }
 }
+
 .contact__item {
     display: flex;
     align-items: center;
     margin-bottom: 6px;
+
     &:last-child {
         margin-bottom: 0;
     }
 }
+
 .contact__icon {
     width: 20px;
     height: 20px;
     margin-right: 4px;
+
     @include pad {
         width: 24px;
         height: 24px;
         margin-right: 8px;
     }
+
     @include pc {
         width: 48px;
         height: 48px;
         margin-right: 16px;
     }
 }
+
 .contact__link {
     color: $white;
+
     &:hover {
         opacity: 0.7;
     }
+
     @include pad {
         font-size: 2rem;
     }
+
     @include pc {
         font-size: 3.6rem;
     }
@@ -263,21 +403,27 @@
 .social {
     display: flex;
 }
+
 .social__item {
     margin-right: 24px;
+
     &:last-child {
         margin-right: 0;
     }
+
     @include pc {
         margin-right: 32px;
     }
 }
+
 .social__icon {
     width: 24px;
     height: 24px;
+
     &:hover {
         opacity: 0.7;
     }
+
     @include pc {
         width: 48px;
         height: 48px;
@@ -287,30 +433,38 @@
 .statement {
     display: flex;
     flex-direction: column;
+
     @include pad {
         flex-direction: row;
     }
 }
+
 .statement__item {
     font-size: 1.4rem;
     color: $white;
     margin-bottom: 8px;
+
     &:last-child {
         margin-bottom: 0;
     }
+
     @include pad {
         margin-bottom: 0;
         font-size: 1.6rem;
+
         &:first-child {
             margin-right: auto;
         }
     }
 }
+
 .statement__link {
     color: $white;
+
     &:hover {
         opacity: 0.7;
     }
+
     @include pad {
         font-size: 1.4rem;
         padding: 8px 12px;
