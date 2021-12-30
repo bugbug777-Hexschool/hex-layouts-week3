@@ -115,6 +115,71 @@
     }
 }
 
+// Intro
+.intro {
+    background-color: $info;
+    padding: 32px 0 40px 0;
+    @include pad {
+        padding: 40px 0 56px 0;
+    }
+    @include pc {
+        padding: 60px 0 80px 0;
+    }
+}
+.intro__title {
+    text-align: center;
+    font-size: 2.4rem;
+    color: $secondary;
+    margin-bottom: 20px;
+    @include pad {
+        font-size: 3.2rem;
+        margin-bottom: 32px;
+    }
+    @include pc {
+        font-size: 4.8rem;
+        margin-bottom: 40px;
+    }
+}
+.cards {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    @include pad {
+        justify-content: space-around;
+    }
+    @include pc {
+        justify-content: space-between;
+    }
+}
+.card {
+    width: 255px;
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 32px;
+    &:last-child {
+        margin-bottom: 0;
+    }
+    @include pad {
+        &:nth-last-child(2) {
+            margin-bottom: 0;
+        }
+    }
+    @include pad {
+        margin-bottom: 0;
+    }
+}
+.card-img {
+    width: 100px;
+    height: 100px;
+    margin: 0 auto 16px auto;
+}
+.card-title {
+    text-align: center;
+    font-size: 2.4rem;
+    color: $secondary;
+    margin-bottom: 8px;
+}
+
 // Footer
 .footer {
     background-color: $primary;
