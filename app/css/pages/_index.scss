@@ -1,4 +1,4 @@
-// 結構與樣式分離 OOCSS
+// 我試著先稍微的拆分，主要還是採用區塊的方式去撰寫樣式
 .header {
     background-color: $primary;
 }
@@ -80,5 +80,37 @@
 
     @include pc {
         padding: 8px 32px;
+    }
+}
+
+.banner {
+    // 設定背景時，要順便給高度，才不會沒有圖。
+    background-image: url("../img/banner.png");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    height: 394px;
+    @include pad {
+        height: 840px;
+    }
+}
+.banner__content {
+    text-align: right;
+    font-size: 3.2rem;
+    color: $secondary;
+    @include pad {
+        font-size: 4.8rem;
+    }
+    @include pad {
+        font-size: 6.4rem;
+    }
+    span {
+        font-size: 1.6rem;
+        @include pad {
+            font-size: 2rem;
+        }
+        @include pc {
+            font-size: 3.6rem;
+        }
     }
 }

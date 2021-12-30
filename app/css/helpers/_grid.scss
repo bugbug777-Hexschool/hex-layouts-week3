@@ -1,0 +1,11 @@
+.container {
+    max-width: 375px;
+    margin: 0 auto;
+    padding: 0 15px;
+    @include pad {
+        max-width: 720px;
+    }
+    @include pc {
+        max-width: 1140px;
+    }
+}
